@@ -1,0 +1,683 @@
+/*
+light blue: #85cadd
+blue: #29abe2
+yellow: #fbbb21
+red: #c1272d
+green: #00a99d
+violet: #5854ae
+grey: #4a4a49
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #81d1e7;
+}
+
+.container{
+  width: 1280px;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+  border: 1 solid red;
+}
+/* wszystkie el blokowe */
+.block{
+  background-color: #e0e0e0;
+  border: 4px solid #4a4a49;
+  display: inline-block;
+}
+.block-center{
+  /* wysrodk w poziomie */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 auto;
+}
+.skyscraper{
+  width: 100px;
+  height: 400px;
+  position: absolute;
+  bottom: 20px;
+  left: 567px;
+}
+/* sam kontener  */
+.palace{
+  width: 300px;
+  height: 420px;
+  position: absolute;
+  bottom: 20px;
+  left: 672px;
+}
+.floor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.window:last-child{
+  margin-bottom: 0;
+}
+
+@keyframes elevator {
+49% {
+background-color: rgb(61, 100, 181);
+}
+50% {
+background-color: white;
+}
+51% {
+background-color: rgb(61, 100, 181);
+}
+}
+
+.window{
+  width: 30px;
+  height: 50px;
+  background-color: rgb(61, 100, 181);
+  margin-bottom: 10px;
+  border: 4px solid #4a4a49;
+  animation-name: elevator;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+}
+/* inny przykad to petla */!!!!!!!!!!!
+.window1{
+  animation-delay: 0.3s;
+}
+.window2{
+  animation-delay: 0.6s;
+}
+.window3{
+  animation-delay: 0.9s;
+}
+.window4{
+  animation-delay: 1.2s;
+}
+.window5{
+  animation-delay: 1.5s;
+}
+.window6{
+  animation-delay: 1.8s;
+}
+
+
+
+/* palac mozna zrobic za pomoca z-indexów te same wys tylko inne szer */
+
+.floor-one{
+  width: 100%;
+  height: 40px;
+}
+.door{
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid black;
+  border-bottom: none;
+}
+.floor-two{
+  width: 70%;
+  height: 80px;
+  bottom: 36px;
+}
+.floor-three{
+  width: 50%;
+  height: 120px;
+  bottom: 112px;
+}
+.floor-four{
+  width: 50%;
+  height: 40px;
+  bottom: 232px;
+  border-bottom: 0;
+}
+.floor-five{
+  width: 20%;
+  height: 43px;
+  bottom: 272px;
+  border-bottom: 0;
+}
+.floor-six{
+  width: 13%;
+  height: 32px;
+  bottom: 315px;
+  border-bottom: 0;
+}
+.floor-seven{
+  width: 7%;
+  height: 31px;
+  bottom: 347px;
+  border-bottom: 0;
+}
+.floor-eight{
+  width: 2%;
+  height: 20px;
+  bottom: 378px;
+  border-bottom: 0;
+}
+/* robimy pień i wzgledem pnia pozycjonujemy kolo */
+.tree{
+  width: 12px;
+  height: 40px;
+  position: absolute;
+  background: #4a4a49;
+  bottom: 20px;
+  left: 40px;
+}
+.container .tree:nth-of-type(3){
+  left:520px;
+}
+.container .tree:nth-of-type(4){
+  left:1080px;
+}
+.crown{
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+}
+
+.leaf{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(78, 173, 99);
+  border-radius: 50%;
+  border: 4px solid #4a4a49;
+  position: absolute;
+  bottom: 50px;
+  z-index: 10;
+}
+/* wez lifa kt jest drugim lifem */
+.leaf:nth-of-type(2){
+  left: -15px;
+  bottom: 20px;
+  z-index: 9;
+}
+.leaf:nth-of-type(3){
+  left: 15px;
+  bottom: 20px;
+  z-index: 8;
+}
+.home1{
+  width: 49px;
+  height: 95px;
+  position: absolute;
+  border: 4px solid #4a4a49;
+  background-color: #e0e0e0;
+  bottom: 20px;
+  right: 255px;
+}
+.home2{
+  width: 49px;
+  height: 60px;
+  position: absolute;
+  border: 4px solid #4a4a49;
+  background-color: #e0e0e0;
+  bottom: 20px;
+  right: 204px;
+}
+/* trójąt za pomocą bordera */
+.roof1{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 28px solid transparent;
+  border-right: 28px solid transparent;
+  border-bottom: 28px solid #4a4a49;
+  top: -28px;
+    left: -7px;
+}
+.roof2{
+  width: 50px;
+  height: 34px;
+  position: absolute;
+  background-color: #4a4a49;
+  bottom: 54px;
+  right: -5px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.bridge{
+    width: 250px;
+    height: 190px;
+    position: absolute;
+    bottom: 20px;
+    left: 267px;
+}
+.bridge_road{
+  width: 100%;
+  height: 13px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 auto;
+  background-color: #e0e0e0;
+  border: 4px solid #4a4a49;
+  display: inline-block;
+}
+.pillars{
+  height: 100%;
+}
+.leg1, .leg2{
+  width: 13px;
+  height: 100%;
+  position: absolute;
+}
+.leg1{
+  transform: skew(-10deg);
+  left: 94px;
+  bottom: -5px;
+}
+.leg2{
+  transform: skew(10deg);
+  left: 130px;
+  bottom: -5px;
+  z-index: -1;
+}
+.line1, .line1a, .line2, .line3, .line3a, .line4 {
+  width: 3px;
+  height: 96%;
+  position: absolute;
+  background-color: #4a4a49;
+}
+.line1{
+  transform: skew(-15deg);
+  left: 84px;
+  bottom: 2px;
+  z-index: -1;
+}
+.line1a{
+  transform: skew(-22deg);
+  left: 70px;
+  bottom: 2px;
+  z-index: -1;
+}
+.line2{
+  transform: skew(-27deg);
+left: 59px;
+bottom: 2px;
+z-index: -1;
+}
+.line3{
+  transform: skew(21deg);
+    left: 160px;
+    bottom: 2px;
+    z-index: -1;
+}
+.line3a{
+  transform: skew(15deg);
+    left: 148px;
+    bottom: 2px;
+    z-index: -1;
+}
+.line4{
+  transform: skew(29deg);
+left: 176px;
+bottom: 2px;
+z-index: -1;
+}
+
+.project{
+  width: 132px;
+  height: 400px;
+  position: absolute;
+  bottom: 20px;
+  right: -6px;
+}
+.building-back{
+    width: 53%;
+    position: absolute;
+    height: 74%;
+    left: 48px;
+    top: 70px;
+    background-color: #e0e0e0;
+    background-color: #e0e0e0;
+
+}
+.building-front{
+    position: absolute;
+    top: 109px;
+    left: 52px;
+    width: 63%;
+    height: 73%;
+    background-color: #e0e0e0;
+}
+.building-skew{
+  position: absolute;
+width: 0;
+height: 0;
+background-color: #e0e0e0;
+border-left: 2px solid transparent;
+border-right: 81px solid transparent;
+border-top: 358px solid #e0e0e0;
+top: 43px;
+left: -13px;
+transform: skew(5deg);
+}
+.building-triangle{
+  position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 58px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 67px solid #e0e0e0;
+    top: 42px;
+    left: 28px;
+    transform: skew(46deg);
+}
+
+@keyframes gradient {
+    0%{background-position:0% 17%}
+    50%{background-position:100% 84%}
+    100%{background-position:0% 17%}
+}
+.building-skew-line{
+  position: absolute;
+  top: 50px;
+  left: -2px;
+  transform: skew(5deg);
+  width: 4px;
+  height: 344px;
+  background: linear-gradient(298deg, #ea7fc9, #FFEB3B, #2196f3);
+  background-size: 40%;
+  animation: gradient 7s ease infinite;
+}
+.street{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: -99px;
+  left: 10px;
+}
+.street-block{
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: red;
+}
+.street-block:nth-child(1){
+  background-color: yellow;
+  bottom: 30px;
+  left: 10px;
+}
+.street-block:nth-child(2){
+  background-color: rgb(251, 10, 138);
+  bottom: 54px;
+  left: 108px;
+}
+.street-block:nth-child(3){
+  background-color: rgb(223, 221, 151);
+  bottom: 65px;
+  left: 340px;
+}
+.street-block:nth-child(4){
+  background-color: rgb(46, 173, 75);
+  bottom: 40px;
+  left: 600px;
+}
+.street-block:nth-child(5){
+  background-color: rgb(252, 109, 109);
+  bottom: 50px;
+  left: 900px;
+}
+.street-block:nth-child(6){
+  background-color: rgb(228, 252, 110);
+  bottom: 500px;
+  left: 900px;
+  transform: rotate(31deg);
+}
+.street-block:nth-child(7){
+  background-color: rgb(228, 252, 110);
+  bottom: 550px;
+  left: 300px;
+  transform: rotate(-50deg);
+}
+.circle{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: rgb(228, 252, 110);
+  bottom: 503px;
+  left: 430px;
+  border-radius: 100%;
+}
+
+.stadion{
+  border-top: 120px solid #e0e0e0;
+border-left: 30px solid transparent;
+border-right: 30px solid transparent;
+height: 0;
+width: 200px;
+position: absolute;
+bottom: 22px;
+left: 76px;
+}
+@keyframes gradient {
+    0%{background-position:0% 17%}
+    50%{background-position:100% 84%}
+    100%{background-position:0% 17%}
+}
+.horizontal{
+  height: 6px;
+  background-color: #4a4a49;
+  position: absolute;
+  background: linear-gradient(298deg, #ff3b3b, #f0f5fa);
+  background-size: 40%;
+  animation: gradient 5s ease infinite;
+  border: 1.5px solid #4a4a49;
+
+}
+.stadion-vertical{
+  position: relative;
+}
+.vertical{
+  width: 4px;
+  height: 140px;
+  bottom: 0px;
+  left: 65px;
+  background-color: #4a4a49;
+  position: absolute;
+}
+
+.horizontal:nth-child(1){
+  bottom: 31px;
+  left: -7px;
+  width: 153px;
+  transform: skew(4deg);
+}
+.horizontal:nth-child(2){
+  bottom: 62px;
+  left: -14px;
+  width: 169px;
+}
+.horizontal:nth-child(3){
+  bottom: 90px;
+  left: -21px;
+  width: 184px;
+}
+.horizontal:nth-child(4){
+  bottom: 116px;
+  left: -27px;
+  width: 195px;
+}
+.horizontal:nth-child(5){
+    bottom: 126px;
+    left: -31px;
+    width: 97px;
+    transform: rotate(-9deg);
+}
+.horizontal:nth-child(6){
+    bottom: 126px;
+    left: 69px;
+    width: 100px;
+    transform: rotate(9deg);
+}
+.stadion-circle{
+  width: 41px;
+  height: 14px;
+  border: 4px solid #4a4a49;
+  border-radius: 39px;
+  position: absolute;
+  bottom: 133px;
+  left: 48px;
+  z-index: 2;
+  background-color: #e0e0e0;
+}
+.vertical:nth-child(7){
+  left: 65px;
+}
+.top{
+  height: 160px !important;
+}
+.vertical:nth-child(8){
+  left: 95px;
+  transform: skew(-4deg);
+}
+.vertical:nth-child(9){
+  left: 125px;
+  transform: skew(-8deg);
+}
+.vertical:nth-child(10){
+  left: 155px;
+  transform: skew(-14deg);
+}
+.vertical:nth-child(11){
+  left: 38px;
+  transform: skew(4deg);
+}
+.vertical:nth-child(12){
+  left:11px;
+  transform: skew(8deg);
+}
+.vertical:nth-child(13){
+  left:-18px;
+  transform: skew(14deg);
+}
+
+.plane{
+    width: 288px;
+    height: 36px;
+    position: absolute;
+    top: 70px;
+    left: 570px;
+    border: 4px solid #4a4a49;
+    border-radius: 40px 301px 3px 238px;
+    background-color: #e0e0e0;
+    margin: 0 auto;
+}
+.plane-window{
+  width: 26px;
+  height: 15px;
+  border: 4px solid #4a4a49;
+  background-color: white;
+  position: absolute;
+  top: 8px;
+  right: 22px;
+  border-radius: 10px;
+}
+.plane-wing{
+    width: 67px;
+    height: 15px;
+    border: 4px solid #4a4a49;
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 24px;
+    right: 86px;
+    border-radius: 10px;
+    transform: rotate(-30deg);
+}
+.plane-tail{
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    position: absolute;
+    bottom: 30px;
+    right: 274px;
+    z-index: -22;
+    clip-path: polygon(100% 41%, 41% 100%, 100% 100%);
+}
+.plane-line{
+  position: absolute;
+  width: 100px;
+  border-top: 4px solid #4a4a49;
+}
+.line-top{
+  bottom: 28px;
+  right: 283px;
+  z-index: -1;
+}
+.line-bottom{
+    bottom: 8px;
+    right: 283px;
+    z-index: -1;
+    transform: rotate(-15deg);
+}
+.plane-poster{
+  width: 150px;
+  height: 50px;
+  background-color: #e99339;
+  position: absolute;
+  }
+.poster-left{
+  top: -3px;
+  right: 514px;
+  border-top: 4px solid #4a4a49;
+  border-bottom: 4px solid #4a4a49;
+  border-left: 4px solid #4a4a49;
+  transform: rotate(6deg);
+}
+.poster-right{
+  top: -3px;
+  right: 370px;
+  border-top: 4px solid #4a4a49;
+  border-bottom: 4px solid #4a4a49;
+  border-right: 4px solid #4a4a49;
+  transform: rotate(-6deg);
+}
+.poster-text{
+  background-image: url("text.png");
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+.poster-logo{
+  background-image: url("logo.png");
+  background-position: center;
+  background-size: contain;
+  height: 45px;
+  background-repeat: no-repeat;
+}
+.flag{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  clip-path: polygon(49% 82%, 1% 0, 100% 0);
+}
+.flag:nth-child(8){
+  background-color: red;
+  top: -14px;
+  right: 664px;
+  transform: rotate(10deg);
+}
+.flag:nth-child(9){
+  background-color: rgb(185, 190, 85);
+  top: -20px;
+  right: 693px;
+  transform: rotate(10deg);
+}
+.flag:nth-child(10){
+  background-color: rgb(190, 85, 164);
+  top: -26px;
+  right: 723px;
+  transform: rotate(10deg);
+}
